@@ -1,0 +1,17 @@
+# docker build --rm -t "telegraf" -f telegrafDockerfile
+ARG version="1.7"
+
+FROM telegraf:${version}
+
+ARG userid="1000"
+ARG groupid="1000"
+ARG dockergid="999"
+
+# In the *container*
+#   Note that a matching group is added automatically
+
+#RUN groupadd -g ${groupid} telegraf && \
+#    useradd telegraf -u ${userid} -g telegraf -m
+
+RUN groupadd -g ${dockergid} docker && \
+    usermod -a -G docker telegraf
