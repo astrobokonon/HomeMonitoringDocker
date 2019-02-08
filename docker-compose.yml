@@ -97,6 +97,9 @@ services:
     volumes:
       - /home/pi/DockerData/homeassistant:/config
       - /etc/localtime:/etc/localtime:ro
+    depends_on:
+      - 'influxdb'
+      - 'telegraf'
     networks:
       - default
     restart: always
