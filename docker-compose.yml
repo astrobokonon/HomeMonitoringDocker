@@ -84,6 +84,7 @@ services:
       - ${DCDATADIR}/logs/grafana:/var/log/grafana
     depends_on:
       - 'influxdb'
+      - 'telegraf'
     networks:
       - default
     user: ${DCUSERID}:${DCGRPID}
@@ -100,6 +101,7 @@ services:
     depends_on:
       - 'influxdb'
       - 'telegraf'
+      - 'grafana'
     networks:
       - default
     restart: always
