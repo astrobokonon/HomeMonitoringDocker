@@ -8,11 +8,11 @@
 #     2018/08/22
 
 # Desired component versions, hardcoded for production & stability
-export TELEGRAF_VERSION="1.9"
+export TELEGRAF_VERSION="1.10"
 export INFLUXDB_VERSION="1.7"
 export CHRONOGRAF_VERSION="1.7"
-export GRAFANA_VERSION="5.4.3"
-export HOMEASSISTANT_VERSION="0.87.0"
+export GRAFANA_VERSION="6.0.1"
+export HOMEASSISTANT_VERSION="0.89.1"
 
 # NO COMMAS!!!
 #   This list is used to check/make the data storage directories
