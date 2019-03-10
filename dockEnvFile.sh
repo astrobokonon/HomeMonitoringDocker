@@ -8,9 +8,9 @@
 #     2018/08/22
 
 # Desired component versions, hardcoded for production & stability
-export TELEGRAF_VERSION="1.10"
-export INFLUXDB_VERSION="1.7"
-export CHRONOGRAF_VERSION="1.7"
+export TELEGRAF_VERSION="1.10-alpine"
+export INFLUXDB_VERSION="1.7-alpine"
+export CHRONOGRAF_VERSION="1.7-alpine"
 export GRAFANA_VERSION="6.0.1"
 export HOMEASSISTANT_VERSION="0.89.1"
 
@@ -26,7 +26,7 @@ DCUSERID=`getent passwd $USER | cut -d: -f3`
 DCGRPID=`getent passwd $USER | cut -d: -f4`
 DCDOCKERID=`getent group docker | cut -d: -f3`
 DOCKDATADIR="$HOME/DockerData/"
-DOCKDEVDIR="$HOME/DockerDev/"
+DOCKDEVDIR="$HOME/DockerDev/HomeMonitoringDocker/"
 
 # Now put it all into the .env file
 # Print a header so we know its vintage
